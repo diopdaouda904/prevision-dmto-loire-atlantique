@@ -1,0 +1,19 @@
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Résultats générés par run_all.R (re-créés à chaque exécution)
+outputs/figures/*
+outputs/tables/*
+!outputs/figures/.gitkeep
+!outputs/tables/.gitkeep
+
+# Fichiers temporaires de Quarto / Office
+*_cache/
+~$*
+
+# Système
+.DS_Store
+Thumbs.db
