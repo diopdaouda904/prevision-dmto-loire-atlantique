@@ -1,8 +1,6 @@
 # Prévoir les recettes fiscales d'un Département : les droits de mutation en Loire-Atlantique
 
-![R](https://img.shields.io/badge/R-4.x-276DC3?logo=r&logoColor=white)
-![Séries temporelles](https://img.shields.io/badge/méthode-séries%20temporelles-1e8449)
-![Shiny](https://img.shields.io/badge/app-Shiny-blue)
+
 
 Mémoire de Master 1 Économétrie appliquée, IAE Nantes (2025-2026), sous la direction du Pr. Olivier Darné.
 
@@ -101,45 +99,7 @@ source("run_all.R")      # produit app/donnees_app.rds
 shiny::runApp("app")
 ```
 
-## Structure du projet
 
-```
-├── run_all.R                    # lance toute l'analyse
-├── R/
-│   ├── 00_config.R              # packages, chemins, paramètres
-│   ├── utils.R                  # fonctions réutilisables (métriques, tests, exports)
-│   ├── 01_donnees_outliers.R    # chargement + points atypiques
-│   ├── 02_analyse_exploratoire.R
-│   ├── 03_modeles_univaries.R   # Naïve, Holt-Winters, ETS, SARIMA, ADAM
-│   ├── 04_arimax.R              # variables macro + sélection des variables
-│   ├── 05_evaluation.R          # RMSE, MAPE, R²OOS, Diebold-Mariano
-│   └── 06_prevision_finale.R
-├── app/app.R                    # application Shiny
-├── data/                        # données (voir data/README.md)
-├── outputs/                     # figures et tableaux générés
-├── rapport/                     # mémoire complet (PDF)
-├── presentation/                # support de soutenance
-└── docs/img/                    # images du README
-```
-
-## Reproduire l'analyse
-
-1. Installer R (≥ 4.2) et RStudio.
-2. Installer les packages :
-   ```r
-   install.packages(c("readr", "dplyr", "ggplot2", "zoo", "forecast", "tseries",
-                      "tsoutliers", "seastests", "RJDemetra", "smooth", "moments",
-                      "flextable", "officer", "shiny", "shinythemes", "plotly"))
-   ```
-   `RJDemetra` (désaisonnalisation X13) a besoin de Java.
-3. Placer les données dans `data/base_complete_dmto.csv` (format dans [data/README.md](data/README.md)).
-4. Ouvrir le dossier dans RStudio et lancer `source("run_all.R")` (quelques minutes).
-
-Les figures et tableaux (en `.csv` et `.docx`) sont créés dans `outputs/`, avec la liste des versions des packages (`outputs/session_info.txt`).
-
-**À savoir :**
-- Les dernières valeurs de l'IPC (janvier-février 2026) et du taux de crédit (février 2026) n'étaient pas publiées au moment de l'étude. Le code reprend la dernière valeur connue et l'affiche dans la console.
-- Le modèle ADAM (package `smooth`) peut donner un résultat légèrement différent selon la version installée du package. Tous les autres résultats sont stables.
 
 ## Compétences mobilisées
 
