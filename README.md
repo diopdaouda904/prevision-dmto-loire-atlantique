@@ -107,7 +107,7 @@ shiny::runApp("app")
 
 ## Auteur
 
-**David DIOP** — Master 2 Économétrie appliquée, IAE Nantes.
+**David DIOP** - Master 2 Économétrie appliquée, IAE Nantes.
 Je recherche un **stage de fin d'études en data analysis ou data science** (3 à 6 mois, à partir de mars 2027, mobile partout en France).
 
 📧 diopdaouda904@gmail.com
