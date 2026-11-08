@@ -8,6 +8,7 @@ Mémoire de Master 1 Économétrie appliquée, IAE Nantes (2025-2026), sous la d
 > J'ai comparé six méthodes de prévision sur 26 ans de données mensuelles.
 > Le modèle **ETS(M,A,M)** fait **9 % d'erreur en moins** que Holt-Winters (RMSE) et **45 % de moins** que la prévision naïve.
 > Sa supériorité sur Holt-Winters est **statistiquement significative** (test de Diebold-Mariano, p = 0,026).
+>  **[Voir l'application interactive en ligne](https://ylnz8i-david-diop.shinyapps.io/prevision-dmto-44/)**
 
 ---
 
@@ -93,6 +94,9 @@ Holt-Winters se trompe de la même façon. Ce rebond du marché illustre la limi
 ## Application interactive
 
 Une application Shiny permet d'explorer la série, de comparer les modèles un par un et de voir la prévision avec ses intervalles de confiance.
+   **Accès en ligne :** https://ylnz8i-david-diop.shinyapps.io/prevision-dmto-44/
+
+   Pour la lancer en local :
 
 ```r
 source("run_all.R")      # produit app/donnees_app.rds
