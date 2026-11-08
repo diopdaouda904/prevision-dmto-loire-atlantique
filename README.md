@@ -96,12 +96,7 @@ Holt-Winters se trompe de la même façon. Ce rebond du marché illustre la limi
 Une application Shiny permet d'explorer la série, de comparer les modèles un par un et de voir la prévision avec ses intervalles de confiance.
    **Accès en ligne :** https://ylnz8i-david-diop.shinyapps.io/prevision-dmto-44/
 
-   Pour la lancer en local :
 
-```r
-source("run_all.R")      # produit app/donnees_app.rds
-shiny::runApp("app")
-```
 
 
 
